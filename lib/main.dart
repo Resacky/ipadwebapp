@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:ipadwebapp/service_selection_form.dart';
 import 'dart:html' as html;
 
 import 'sign_in_form.dart';
@@ -67,8 +68,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
                            CustomTextButton(text: "Sign In", onPressed: (){
                            Navigator.push(context,
-                                          MaterialPageRoute(builder: (context) => const SignInForm()),
-                                          );
+                                          MaterialPageRoute(builder: (context) => service_selection()),);
                            }),
           ],
         ),
