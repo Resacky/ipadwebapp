@@ -27,34 +27,71 @@ class _service_selectionState extends State<service_selection> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         CustomTextButton(text: "Building", 
-                                         onPressed: () {Navigator.push(context,
+                                          onPressed: () {
+                                          Navigator.push(context,
                                           MaterialPageRoute(builder: (context) => const SignInForm()),
-                                          );}),
-                        CustomTextButton(text: "Board of Architects", onPressed: (){}),
+                                          );
+                        }),
+                        CustomTextButton(text: "Board of Architects", 
+                                          onPressed: (){
+                                          Navigator.push(context,
+                                          MaterialPageRoute(builder: (context) => const SignInForm()),
+                                          );
+                        }),
                       ]
                     ),
 
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        CustomTextButton(text: "Construction Regulation", onPressed: (){}),
-                        CustomTextButton(text: "Electrical", onPressed: (){}),
+                        CustomTextButton(text: "Construction Regulation", 
+                                          onPressed: (){
+                                          Navigator.push(context,
+                                          MaterialPageRoute(builder: (context) => const SignInForm()),
+                                          );
+                        }),
+                        CustomTextButton(text: "Electrical", 
+                                          onPressed: (){
+                                          Navigator.push(context,
+                                          MaterialPageRoute(builder: (context) => const SignInForm()),
+                                          );
+                        }),
                       ]
                     ),
 
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        CustomTextButton(text: "Fire", onPressed: (){}),
-                        CustomTextButton(text: "Mechanical", onPressed: (){}),
+                        CustomTextButton(text: "Fire", 
+                                          onPressed: (){
+                                          Navigator.push(context,
+                                          MaterialPageRoute(builder: (context) => const SignInForm()),
+                                          );
+                        }),
+                        CustomTextButton(text: "Mechanical", 
+                                          onPressed: (){
+                                          Navigator.push(context,
+                                          MaterialPageRoute(builder: (context) => const SignInForm()),
+                                          );
+                        }),
                       ]
                     ),
 
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        CustomTextButton(text: "Permits/Inspections", onPressed: (){}),
-                        CustomTextButton(text: "Planning", onPressed: (){}),
+                        CustomTextButton(text: "Permits/Inspections", 
+                                          onPressed: (){
+                                          Navigator.push(context,
+                                          MaterialPageRoute(builder: (context) => const SignInForm()),
+                                          );
+                        }),
+                        CustomTextButton(text: "Planning", 
+                                          onPressed: (){
+                                          Navigator.push(context,
+                                          MaterialPageRoute(builder: (context) => const SignInForm()),
+                                          );
+                        }),
                       ]
                     ),
                   ],
