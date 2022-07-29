@@ -1,8 +1,15 @@
+import 'dart:html';
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import "package:http/http.dart" as http;
 
 class SignInForm extends StatefulWidget {
-  const SignInForm({Key? key}) : super(key: key);
+
+  final String lineID;
+
+  const SignInForm({Key? key, required this.lineID}) : super(key: key);
 
   @override
   State<SignInForm> createState() => _SignInFormState();
@@ -50,7 +57,7 @@ class _SignInFormState extends State<SignInForm> {
     );
   }
 
-  onEnter() {
+  onEnter() async {
 
     isNameForm ? name = controller.text : phone = controller.text;
     controller.clear();
@@ -61,7 +68,34 @@ class _SignInFormState extends State<SignInForm> {
         isNameForm = false;
         });
 
+      } else {
+
+        String apiKey = "Aqs2g3xU81u3u9UhObPC9cKT4d4aiMMeT42l8MMs";
+
+        //add code here to send the HTTPS command to speak to the API...
+        final response = await http.post(
+        Uri.parse('https://api.qminder.com/v1/lines/${widget.lineID}/ticket'),
+        // Send authorization headers to the backend.
+        headers: {
+        "X-Qminder-REST-API-KEY": apiKey, 
+        'Content-Type': 'application/x-www-form-urlencoded'},
+        body: {'firstName': '$name',
+               'phoneNumber': '$phone'
+              }
+        );
+
+        //potential bugs/ features:
+        // add first name and last name variables...?
+        // make it a mobile app for IOS android and windows...?
+        // have the websites open an internal browser to open the sites, instead of 
+        // having the webapp reroute the whole website
+        // program an internal timer to restart the app at a wait of about 2 minutes..?
+
+        print(response.body);
+        print(response.statusCode);
+
       }
 
   }
+
 }

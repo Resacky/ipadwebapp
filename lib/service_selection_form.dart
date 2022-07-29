@@ -12,6 +12,9 @@ class service_selection extends StatefulWidget {
 }
 
 class _service_selectionState extends State<service_selection> {
+
+  String lineID = "";
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,16 +31,12 @@ class _service_selectionState extends State<service_selection> {
                       children: [
                         CustomTextButton(text: "Building", 
                                           onPressed: () {
-                                          Navigator.push(context,
-                                          MaterialPageRoute(builder: (context) => const SignInForm()),
-                                          );
-                        }),
+                                            onSelected(context, "165056");
+                                          }),
                         CustomTextButton(text: "Board of Architects", 
-                                          onPressed: (){
-                                          Navigator.push(context,
-                                          MaterialPageRoute(builder: (context) => const SignInForm()),
-                                          );
-                        }),
+                                          onPressed: () {
+                                            onSelected(context, "165058");
+                                          }),
                       ]
                     ),
 
@@ -45,17 +44,13 @@ class _service_selectionState extends State<service_selection> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         CustomTextButton(text: "Construction Regulation", 
-                                          onPressed: (){
-                                          Navigator.push(context,
-                                          MaterialPageRoute(builder: (context) => const SignInForm()),
-                                          );
-                        }),
+                                          onPressed: () {
+                                            onSelected(context, "165059");
+                                          }),
                         CustomTextButton(text: "Electrical", 
-                                          onPressed: (){
-                                          Navigator.push(context,
-                                          MaterialPageRoute(builder: (context) => const SignInForm()),
-                                          );
-                        }),
+                                          onPressed: () {
+                                            onSelected(context, "165061");
+                                          }),
                       ]
                     ),
 
@@ -63,17 +58,13 @@ class _service_selectionState extends State<service_selection> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         CustomTextButton(text: "Fire", 
-                                          onPressed: (){
-                                          Navigator.push(context,
-                                          MaterialPageRoute(builder: (context) => const SignInForm()),
-                                          );
-                        }),
+                                          onPressed: () {
+                                            onSelected(context, "165064");
+                                          }),
                         CustomTextButton(text: "Mechanical", 
-                                          onPressed: (){
-                                          Navigator.push(context,
-                                          MaterialPageRoute(builder: (context) => const SignInForm()),
-                                          );
-                        }),
+                                          onPressed: () {
+                                            onSelected(context, "165065");
+                                          }),
                       ]
                     ),
 
@@ -81,17 +72,13 @@ class _service_selectionState extends State<service_selection> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         CustomTextButton(text: "Permits/Inspections", 
-                                          onPressed: (){
-                                          Navigator.push(context,
-                                          MaterialPageRoute(builder: (context) => const SignInForm()),
-                                          );
-                        }),
+                                          onPressed: () {
+                                            onSelected(context, "165067");
+                                          }),
                         CustomTextButton(text: "Planning", 
-                                          onPressed: (){
-                                          Navigator.push(context,
-                                          MaterialPageRoute(builder: (context) => const SignInForm()),
-                                          );
-                        }),
+                                          onPressed: () {
+                                            onSelected(context, "165068");
+                                          }),
                       ]
                     ),
                   ],
@@ -99,4 +86,12 @@ class _service_selectionState extends State<service_selection> {
       ),
     );      
   }
+
+  onSelected(BuildContext context, String lineID) {
+
+    Navigator.push(context,
+    MaterialPageRoute(builder: (context) => SignInForm(lineID: lineID)),);
+
+  }
+
 }
