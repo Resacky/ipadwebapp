@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/05cdc0fd-33d0-4051-b4d2-d8180121a481/microsoft.web/sites/subscriptions/05cdc0fd-33d0-4051-b4d2-d8180121a481/resourceGroups/Ipad-WebApp_group/providers/Microsoft.Web/sites/Ipad-WebApp",
+    "appService.deploySubpath": "."
+}
