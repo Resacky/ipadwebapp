@@ -53,5 +53,5 @@ jobs:
         with:
           app-name: 'Ipad-WebApp'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_488994C7A49E4F589F8B892CA5108E46 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_F204AF121AD34674BCA319FEDDCF15A0 }}
           package: .
